@@ -16,4 +16,17 @@ function getAppointmentsForDay(state, day) {
   return appointmentsArr;
 }
 
-module.exports = { getAppointmentsForDay };
+function getInterview(state, interview) {
+  if (!interview) {
+    return null;
+  }
+
+  const output = {
+    student: interview.student,
+    interviewer: state.interviewers[interview.interviewer]
+  };
+
+  return output;
+}
+
+module.exports = { getAppointmentsForDay, getInterview };
