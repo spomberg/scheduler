@@ -67,7 +67,6 @@ export default function Application(props) {
         appointments
       })
     })
-    .catch((err) => console.log(err))
   }
 
   return (
